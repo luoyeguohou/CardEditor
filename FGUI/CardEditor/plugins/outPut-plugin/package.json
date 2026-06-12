@@ -1,0 +1,11 @@
+{
+  "name": "outPut-plugin",
+  "displayName": "outPut-plugin",
+  "description": "",
+  "version": "1.0",
+  "author": {
+    "name": "gaohaochen"
+  },
+  "icon": "",
+  "main": "main.js"
+}

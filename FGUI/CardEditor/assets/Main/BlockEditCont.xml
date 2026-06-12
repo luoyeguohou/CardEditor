@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <component id="n27_bwuy" name="block" src="bwuy2" fileName="Block.xml" xy="1344,353"/>
+    <component id="n28_bwuy" name="btnAddOperand" src="bwuy1" fileName="Button.xml" xy="281,446" size="380,134">
+      <Button title="Add" titleFontSize="62"/>
+    </component>
+    <component id="n29_bwuy" name="btnDelOperand" src="bwuy1" fileName="Button.xml" xy="712,457" size="383,133">
+      <Button title="delete" titleFontSize="68"/>
+    </component>
+    <component id="n31_bwuy" name="combType" src="bwuy6" fileName="ComboBox1.xml" xy="160,254" scale="6,6">
+      <ComboBox title="Action" visibleItemCount="10" direction="down">
+        <item title="Action"/>
+        <item title="Condition"/>
+        <item title="PayItem"/>
+        <item title="Number"/>
+      </ComboBox>
+    </component>
+    <component id="n32_bwuy" name="btnChangeType" src="bwuy1" fileName="Button.xml" xy="783,240" size="539,154">
+      <Button title="alter operand type" titleFontSize="54"/>
+    </component>
+    <component id="n35_bwuy" name="btnClose" src="bwuy1" fileName="Button.xml" xy="1679,25" size="182,95">
+      <Button title="close" titleFontSize="38"/>
+    </component>
+    <component id="n36_jflc" name="btnMoveUp" src="bwuy1" fileName="Button.xml" xy="287,625" size="380,134">
+      <Button title="move up" titleFontSize="67"/>
+    </component>
+    <component id="n37_jflc" name="btnMoveDown" src="bwuy1" fileName="Button.xml" xy="709,628" size="383,133">
+      <Button title="move down" titleFontSize="61"/>
+    </component>
+  </displayList>
+</component>

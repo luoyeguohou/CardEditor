@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <list id="n22_bwuy" name="lstBlock" xy="39,135" size="1828,782" layout="flow_hz" overflow="scroll" defaultItem="ui://bkt1ky7fbwuy2">
+      <item/>
+      <item/>
+    </list>
+    <component id="n23_bwuy" name="btnAdd" src="bwuy1" fileName="Button.xml" xy="270,954" size="267,90">
+      <Button title="add" titleFontSize="35"/>
+    </component>
+    <component id="n24_bwuy" name="btnDel" src="bwuy1" fileName="Button.xml" xy="838,959" size="267,90">
+      <Button title="delete" titleFontSize="35"/>
+    </component>
+    <component id="n25_bwuy" name="btnEdit" src="bwuy1" fileName="Button.xml" xy="1359,951" size="267,90">
+      <Button title="edit" titleFontSize="35"/>
+    </component>
+    <component id="n34_bwuy" name="btnClose" src="bwuy1" fileName="Button.xml" xy="1719,16" size="182,95">
+      <Button title="close" titleFontSize="38"/>
+    </component>
+  </displayList>
+</component>

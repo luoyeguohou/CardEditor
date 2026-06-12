@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="150,200">
+  <displayList>
+    <graph id="n0_bwuy" name="n0" xy="0,0" size="150,200" touchable="false" type="rect" lineColor="#ffa0a0a0" fillColor="#fff0f0f0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <list id="n1_bwuy" name="list" xy="0,0" size="150,200" overflow="scroll" defaultItem="ui://bkt1ky7fbwuy4">
+      <relation target="" sidePair="width-width"/>
+      <item title="1"/>
+      <item title="2"/>
+      <item title="3"/>
+      <item title="4"/>
+    </list>
+  </displayList>
+  <relation target="n1_bwuy" sidePair="height-height"/>
+</component>

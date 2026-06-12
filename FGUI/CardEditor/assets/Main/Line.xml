@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="949,5">
+  <displayList>
+    <graph id="n51_bwuy" name="n51" xy="0,0" pivot="0,0.5" anchor="true" size="949,5" type="rect" fillColor="#ffff0000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+  </displayList>
+</component>

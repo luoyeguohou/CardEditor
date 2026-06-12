@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <list id="n23_bwuy" name="lstProp" xy="61,479" size="523,401" overflow="scroll" defaultItem="ui://bkt1ky7fbwuy8">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n24_bwuy" name="btnAddProp" src="bwuy1" fileName="Button.xml" xy="47,236" size="238,85">
+      <Button title="AddProp" titleFontSize="34"/>
+    </component>
+    <component id="n26_bwuy" name="btnDelProp" src="bwuy1" fileName="Button.xml" xy="336,238" size="241,86">
+      <Button title="DelProp" titleFontSize="37"/>
+    </component>
+    <component id="n27_bwuy" name="btnAddBlock" src="bwuy1" fileName="Button.xml" xy="701,39" size="164,59">
+      <Button title="AddBlock" titleFontSize="26"/>
+    </component>
+    <component id="n28_bwuy" name="btnRemoveBlock" src="bwuy1" fileName="Button.xml" xy="895,40" size="204,59">
+      <Button title="RemoveBlock" titleFontSize="26"/>
+    </component>
+    <graph id="n31_bwuy" name="n31" xy="128,106" size="379,105" type="rect" fillColor="#ffcccccc"/>
+    <text id="n29_bwuy" name="txtID" xy="166,122" size="303,75" fontSize="43" autoSize="none" text="" input="true" prompt="input id ........"/>
+    <component id="n33_bwuy" name="btnClose" src="bwuy1" fileName="Button.xml" xy="1705,22" size="182,95">
+      <Button title="close" titleFontSize="38"/>
+    </component>
+    <component id="n34_jflc" name="btnMoveDown" src="bwuy1" fileName="Button.xml" xy="339,352" size="241,86">
+      <Button title="move down" titleFontSize="37"/>
+    </component>
+    <component id="n35_jflc" name="btnMoveUp" src="bwuy1" fileName="Button.xml" xy="49,350" size="238,85">
+      <Button title="move up" titleFontSize="34"/>
+    </component>
+  </displayList>
+</component>

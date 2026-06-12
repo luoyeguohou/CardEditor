@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="513,100" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <graph id="n20_bwuy" name="n20" xy="0,0" size="513,100" type="rect">
+      <gearColor controller="button" pages="1,3" values="#cccccc|#cccccc" default="#ffffff"/>
+    </graph>
+    <graph id="n22_jflc" name="n22" xy="11,12" size="235,78" type="rect" fillColor="#ffcccccc"/>
+    <graph id="n23_jflc" name="n23" xy="266,13" size="235,78" type="rect" fillColor="#ffcccccc"/>
+    <text id="n19_bwuy" name="txtName" xy="24,23" size="212,53" fontSize="39" autoSize="none" text="Name" input="true"/>
+    <text id="n21_bwuy" name="txtVal" xy="275,23" size="212,53" fontSize="39" autoSize="none" text="Val" input="true"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

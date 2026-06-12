@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="214,66" extention="Button">
+  <controller name="type" exported="true" pages="0,,1,,2,,3," selected="0"/>
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <graph id="n17_t114" name="n17" xy="-6,-7" size="225,80" type="rect" fillColor="#ff97da97" corner="20">
+      <gearDisplay controller="button" pages="1,3"/>
+      <gearColor controller="type" pages="0,1,2" values="#97da97|#ce6df2|#68d3f1" default="#f31c72"/>
+    </graph>
+    <graph id="n12_bwuy" name="n12" xy="0,0" size="214,66" type="rect" fillColor="#ff97da97" corner="20">
+      <gearColor controller="type" pages="0,1,2" values="#97da97|#ce6df2|#68d3f1" default="#f31c72"/>
+    </graph>
+    <text id="n14_bwuy" name="n14" xy="19,7" size="132,55" fontSize="39" autoSize="none" text="5" input="true">
+      <gearDisplay controller="type" pages="3"/>
+    </text>
+    <graph id="n16_bwuy" name="btn" xy="179,34" pivot="0.5,0.5" anchor="true" size="44,45" type="rect" lineSize="8"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

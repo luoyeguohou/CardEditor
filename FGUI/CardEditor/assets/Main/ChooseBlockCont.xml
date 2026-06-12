@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <list id="n30_bwuy" name="lstBlock" xy="41,159" size="1849,782" layout="row" overflow="scroll" defaultItem="ui://bkt1ky7fbwuy2" autoItemSize="false">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <graph id="n32_bwuy" name="n32" xy="563,18" size="753,131" type="rect" fillColor="#ffcccccc"/>
+    <text id="n31_bwuy" name="txtFilter" xy="596,30" size="683,107" fontSize="39" autoSize="none" text="" input="true"/>
+    <component id="n34_bwuy" name="btnConfirm" src="bwuy1" fileName="Button.xml" xy="814,953" size="244,84">
+      <Button title="confirm" titleFontSize="32"/>
+    </component>
+    <text id="n35_jflc" name="n35" xy="369,37" size="176,81" fontSize="59" autoSize="none" text="filter:"/>
+  </displayList>
+</component>

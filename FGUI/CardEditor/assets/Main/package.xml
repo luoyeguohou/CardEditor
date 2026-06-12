@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="bkt1ky7f">
+  <resources>
+    <component id="p0420" name="MainWin.xml" path="/" exported="true"/>
+    <component id="bwuy1" name="Button.xml" path="/"/>
+    <component id="bwuy2" name="Block.xml" path="/" exported="true"/>
+    <component id="bwuy3" name="BlockWin.xml" path="/" exported="true"/>
+    <component id="bwuy4" name="ComboBox1_item.xml" path="/"/>
+    <component id="bwuy5" name="ComboBox1_popup.xml" path="/"/>
+    <component id="bwuy6" name="ComboBox1.xml" path="/" exported="true"/>
+    <component id="bwuy7" name="BlockEditWin.xml" path="/" exported="true"/>
+    <component id="bwuy8" name="Prop.xml" path="/" exported="true"/>
+    <component id="bwuy9" name="CardWin.xml" path="/" exported="true"/>
+    <component id="bwuya" name="ChooseBlockWin.xml" path="/" exported="true"/>
+    <component id="bwuyb" name="CardPreview.xml" path="/"/>
+    <component id="bwuyd" name="CardListWin.xml" path="/" exported="true"/>
+    <component id="bwuye" name="Operand.xml" path="/"/>
+    <component id="bwuyf" name="Line.xml" path="/" exported="true"/>
+    <component id="otdeg" name="BlockEditCont.xml" path="/"/>
+    <component id="otdeh" name="BlockCont.xml" path="/"/>
+    <component id="otdei" name="CardListCont.xml" path="/"/>
+    <component id="otdej" name="CardCont.xml" path="/"/>
+    <component id="otdek" name="ChooseBlockCont.xml" path="/"/>
+    <component id="jflcl" name="MainCont.xml" path="/"/>
+  </resources>
+  <publish name="" genCode="true"/>
+</packageDescription>
