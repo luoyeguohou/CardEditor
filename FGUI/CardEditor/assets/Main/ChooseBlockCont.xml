@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080">
   <displayList>
-    <list id="n30_bwuy" name="lstBlock" xy="41,159" size="1849,782" layout="row" overflow="scroll" defaultItem="ui://bkt1ky7fbwuy2" autoItemSize="false">
+    <list id="n30_bwuy" name="lstBlock" xy="41,159" size="1849,782" layout="flow_hz" overflow="scroll" defaultItem="ui://bkt1ky7fbwuy2">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
       <item/>
       <item/>
       <item/>

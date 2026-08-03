@@ -33,7 +33,8 @@ namespace Main
             m_cont.m_txtGitRepo.text = PlayerPrefs.GetString(PrefKeyRepo, "");
         }
 
-        public void Init() {
+        public void Init()
+        {
             m_cont.m_platform.selectedIndex = Application.isMobilePlatform ? 1 : 0;
         }
         private void OnClickSaveWork()
@@ -57,24 +58,28 @@ namespace Main
             FGUIUtil.CreateWindow<UI_CardListWin>("CardListWin").UpdateView();
         }
 
-        private void OnClickExport() {
+        private void OnClickExport()
+        {
             CreateExcel();
         }
-        private void OnClickChooseFolder() {
-            Data.work.export = FileUtil.ChooseAFolder();
+        private void OnClickChooseFolder()
+        {
+            Data.work.export = FileUtil.SaveExcel();
             m_cont.m_txtExport.text = Data.work.export;
         }
 
         void CreateExcel()
         {
-            string path = Path.Combine(Application.dataPath, "Test.xlsx");
-
+            string path = FileUtil.SaveExcel();
             FileInfo file = new FileInfo(path);
+
+            if (file.Exists) file.Delete();
 
             using (ExcelPackage package = new ExcelPackage(file))
             {
-                ExcelWorksheet effectSheet = package.Workbook.Worksheets.Add("Effects");
-                ExcelWorksheet cardSheet = package.Workbook.Worksheets.Add("Cards");
+
+                ExcelWorksheet effectSheet = package.Workbook.Worksheets.Add("Effect");
+                //ExcelWorksheet cardSheet = package.Workbook.Worksheets.Add("Card");
 
                 effectSheet.Cells[1, 1].Value = "id";
                 effectSheet.Cells[1, 2].Value = "action";
@@ -83,42 +88,46 @@ namespace Main
                 effectSheet.Cells[1, 5].Value = "linked_3";
                 effectSheet.Cells[1, 6].Value = "linked_4";
 
-                cardSheet.Cells[1, 1].Value = "id";
-                cardSheet.Cells[1, 2].Value = "prop_1";
-                cardSheet.Cells[1, 3].Value = "val_1";
-                cardSheet.Cells[1, 4].Value = "prop_2";
-                cardSheet.Cells[1, 5].Value = "val_2";
-                cardSheet.Cells[1, 6].Value = "prop_3";
-                cardSheet.Cells[1, 7].Value = "val_3";
-                cardSheet.Cells[1, 8].Value = "prop_4";
-                cardSheet.Cells[1, 9].Value = "val_4";
-                cardSheet.Cells[1, 10].Value = "effect";
+                //cardSheet.Cells[1, 1].Value = "id";
+                //cardSheet.Cells[1, 2].Value = "prop_1";
+                //cardSheet.Cells[1, 3].Value = "val_1";
+                //cardSheet.Cells[1, 4].Value = "prop_2";
+                //cardSheet.Cells[1, 5].Value = "val_2";
+                //cardSheet.Cells[1, 6].Value = "prop_3";
+                //cardSheet.Cells[1, 7].Value = "val_3";
+                //cardSheet.Cells[1, 8].Value = "prop_4";
+                //cardSheet.Cells[1, 9].Value = "val_4";
+                //cardSheet.Cells[1, 10].Value = "effect";
 
                 int effectID = 1;
                 int cardID = 1;
 
-                foreach (Card c in Data.work.cards) 
-                { 
+                foreach (Card c in Data.work.cards)
+                {
                     // cards
                     List<Block> blocks = c.GetOrderedBlocks();
-                    cardSheet.Cells[2+cardID, 1].Value = c.id;
-                    for (int i = 0; i < c.attrs.Count; i++) 
-                    {
-                        cardSheet.Cells[2+cardID, 2+i*2].Value = c.attrs[i].name;
-                        cardSheet.Cells[2+cardID, 3+i*2].Value = c.attrs[i].value;
-                    }
-                    cardSheet.Cells[2 + cardID, 10].Value = "id" + effectID;
+                    //cardSheet.Cells[2+cardID, 1].Value = c.id;
+                    //for (int i = 0; i < c.attrs.Count; i++) 
+                    //{
+                    //    cardSheet.Cells[2+cardID, 2+i*2].Value = c.attrs[i].name;
+                    //    cardSheet.Cells[2+cardID, 3+i*2].Value = c.attrs[i].value;
+                    //}
+                    //cardSheet.Cells[2 + cardID, 10].Value = "id" + effectID;
                     //effects
-                    foreach (Block b in blocks) 
+                    foreach (Block b in blocks)
                     {
-                        effectSheet.Cells[2 + effectID,1].Value = "id"+effectID;
+                        effectSheet.Cells[2 + effectID, 1].Value = b == blocks[0] ? c.id : c.id+blocks.IndexOf(b);
                         effectSheet.Cells[2 + effectID, 2].Value = b.id;
-                        for (int i = 0; i < b.operands.Count; i++) 
+                        for (int i = 0; i < b.operands.Count; i++)
                         {
-                            if (b.operands[i].type == OperandType.Num)
-                                effectSheet.Cells[2 + effectID, 3 + i].Value = b.operands[i].num;
+                            if (b.operands[i].linkedBlock == null)
+                            {
+                                effectSheet.Cells[2 + effectID, 3 + i].Value = b.operands[i].data;
+                            }
                             else
-                                effectSheet.Cells[2 + effectID, 3 + i].Value = "id" + (effectID + blocks.IndexOf(b.operands[i].linkedBlock));
+                            {
+                                effectSheet.Cells[2 + effectID, 3 + i].Value = c.id + (blocks.IndexOf(b.operands[i].linkedBlock));
+                            }
                         }
                         effectID++;
                     }

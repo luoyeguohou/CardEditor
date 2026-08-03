@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +13,7 @@ public class CoroutineQueue : MonoBehaviour
         inst = this;
     }
 
-    // Íâ²¿µ÷ÓÃ£ºÌí¼ÓÈÎÎñ
+    // ï¿½â²¿ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public void Enqueue(IEnumerator coroutine)
     {
         queue.Enqueue(coroutine);
@@ -33,5 +34,19 @@ public class CoroutineQueue : MonoBehaviour
         }
 
         isRunning = false;
+    }
+
+    /// <summary>
+    /// ä¸‹ä¸€å¸§æ‰§è¡Œ actionã€‚ç”¨æ³•ï¼šCoroutineQueue.inst.NextFrame(() => { ... });
+    /// </summary>
+    public void NextFrame(Action action)
+    {
+        Enqueue(NextFrameRoutine(action));
+    }
+
+    private IEnumerator NextFrameRoutine(Action action)
+    {
+        yield return null;
+        action?.Invoke();
     }
 }

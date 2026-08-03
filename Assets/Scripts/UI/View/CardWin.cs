@@ -75,7 +75,10 @@ namespace Main
                 }
             }
 
-            RefreshLines();
+            CoroutineQueue.inst.NextFrame(() =>
+            {
+                RefreshLines();
+            });
         }
         private void OnClickBlockView(UI_Block ui)
         {
@@ -156,7 +159,7 @@ namespace Main
 
         private Vector2 GetOperandAnchor(UI_Operand opUI)
         {
-            return opUI.m_btn.LocalToGlobal(new Vector2(opUI.m_btn.width / 2, opUI.m_btn.height / 2));
+            return opUI.m_btn.LocalToGlobal(new Vector2());
         }
 
         // ----- persistent link lines -----
@@ -187,7 +190,7 @@ namespace Main
                     UI_Block targetUI = blockViews[targetIdx];
 
                     Vector2 from = m_cont.GlobalToLocal(GetOperandAnchor(operandViews[j]));
-                    Vector2 to = m_cont.GlobalToLocal(targetUI.LocalToGlobal(new Vector2(targetUI.width / 2, targetUI.height / 2)));
+                    Vector2 to = m_cont.GlobalToLocal(targetUI.LocalToGlobal(new Vector2(0, targetUI.height / 2)));
 
                     GObject line = UIPackage.CreateObject("Main", "Line");
                     m_cont.AddChild(line);

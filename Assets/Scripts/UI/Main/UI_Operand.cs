@@ -8,6 +8,7 @@ namespace Main
     public partial class UI_Operand : GButton
     {
         public Controller m_type;
+        public GTextInput m_txtOperand;
         public GGraph m_btn;
         public const string URL = "ui://bkt1ky7fbwuye";
 
@@ -21,6 +22,7 @@ namespace Main
             base.ConstructFromXML(xml);
 
             m_type = GetControllerAt(0);
+            m_txtOperand = (GTextInput)GetChildAt(2);
             m_btn = (GGraph)GetChildAt(3);
         }
     }

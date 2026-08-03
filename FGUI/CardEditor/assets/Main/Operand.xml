@@ -10,7 +10,7 @@
     <graph id="n12_bwuy" name="n12" xy="0,0" size="214,66" type="rect" fillColor="#ff97da97" corner="20">
       <gearColor controller="type" pages="0,1,2" values="#97da97|#ce6df2|#68d3f1" default="#f31c72"/>
     </graph>
-    <text id="n14_bwuy" name="n14" xy="19,7" size="132,55" fontSize="39" autoSize="none" text="5" input="true">
+    <text id="n14_bwuy" name="txtOperand" xy="19,7" size="132,55" fontSize="39" autoSize="none" text="5" input="true">
       <gearDisplay controller="type" pages="3"/>
     </text>
     <graph id="n16_bwuy" name="btn" xy="179,34" pivot="0.5,0.5" anchor="true" size="44,45" type="rect" lineSize="8"/>

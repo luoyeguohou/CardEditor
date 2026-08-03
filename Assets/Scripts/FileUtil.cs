@@ -73,6 +73,20 @@ public class FileUtil
         }
     }
 
+    public static string SaveExcel() {
+        SaveFileDialog dialog = new SaveFileDialog();
+        dialog.Filter = "Excel files (*.xlsx)|*.xlsx";
+        dialog.Title = "Save Excel File";
+
+        if (dialog.ShowDialog() == DialogResult.OK)
+        {
+            return dialog.FileName;
+        }
+        else { 
+            return null;
+        }
+    }
+
     public static void LoadJson()
     {
         OpenFileDialog dialog = new OpenFileDialog();
@@ -85,3 +99,4 @@ public class FileUtil
         }
     }
 }
+

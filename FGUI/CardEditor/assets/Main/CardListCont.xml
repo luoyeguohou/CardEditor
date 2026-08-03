@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080">
+  <controller name="isFiltering" pages="1,,0," selected="0"/>
   <displayList>
     <list id="n42_bwuy" name="lstCard" xy="124,163" size="1682,746" layout="flow_hz" overflow="scroll" defaultItem="ui://bkt1ky7fbwuyb">
       <item/>
@@ -14,9 +15,11 @@
       <item/>
     </list>
     <component id="n44_bwuy" name="btnAdd" src="bwuy1" fileName="Button.xml" xy="492,940" size="267,90">
+      <gearDisplay controller="isFiltering" pages="1"/>
       <Button title="add" titleFontSize="35"/>
     </component>
-    <component id="n45_bwuy" name="btnDel" src="bwuy1" fileName="Button.xml" xy="841,943" size="267,90">
+    <component id="n45_bwuy" name="btnDel" src="bwuy1" fileName="Button.xml" xy="844,943" size="267,90">
+      <gearDisplay controller="isFiltering" pages="1"/>
       <Button title="delete" titleFontSize="35"/>
     </component>
     <component id="n46_bwuy" name="btnEdit" src="bwuy1" fileName="Button.xml" xy="1172,940" size="267,90">
@@ -25,5 +28,8 @@
     <component id="n47_bwuy" name="btnClose" src="bwuy1" fileName="Button.xml" xy="1677,29" size="182,95">
       <Button title="close" titleFontSize="38"/>
     </component>
+    <graph id="n48_tppk" name="n48" xy="600,16" size="753,131" type="rect" fillColor="#ffcccccc"/>
+    <text id="n49_tppk" name="txtFilter" xy="633,28" size="683,107" fontSize="39" autoSize="none" text="" input="true"/>
+    <text id="n50_tppk" name="n50" xy="406,35" size="176,81" fontSize="59" autoSize="none" text="filter:"/>
   </displayList>
 </component>

@@ -203,12 +203,12 @@ public class Operand {
 
     public string uid = System.Guid.NewGuid().ToString();
     public OperandType type = OperandType.Action;
-    public int num;
+    public string data = "";
 }
 
 public enum OperandType { 
     Action,
     PayItem,
     Condition,
-    Num
+    String
 }

@@ -7,11 +7,13 @@ namespace Main
 {
     public partial class UI_CardListCont : GComponent
     {
+        public Controller m_isFiltering;
         public GList m_lstCard;
         public GButton m_btnAdd;
         public GButton m_btnDel;
         public GButton m_btnEdit;
         public GButton m_btnClose;
+        public GTextInput m_txtFilter;
         public const string URL = "ui://bkt1ky7fotdei";
 
         public static UI_CardListCont CreateInstance()
@@ -23,11 +25,13 @@ namespace Main
         {
             base.ConstructFromXML(xml);
 
+            m_isFiltering = GetControllerAt(0);
             m_lstCard = (GList)GetChildAt(0);
             m_btnAdd = (GButton)GetChildAt(1);
             m_btnDel = (GButton)GetChildAt(2);
             m_btnEdit = (GButton)GetChildAt(3);
             m_btnClose = (GButton)GetChildAt(4);
+            m_txtFilter = (GTextInput)GetChildAt(6);
         }
     }
 }
